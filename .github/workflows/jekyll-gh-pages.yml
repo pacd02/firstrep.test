@@ -23,6 +23,7 @@ concurrency:
 jobs:
   # Build job
   build:
+    theme: minima
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -36,7 +37,7 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
-  theme: minima
+
 
   # Deployment job
   deploy:
